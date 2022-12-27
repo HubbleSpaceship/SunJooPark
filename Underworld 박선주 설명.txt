@@ -1,0 +1,26 @@
+지하
+지하는 고요하고 비밀스러운 심해 속 모습이다. 고대 유적과 미로찾기를 반영하여 판타지적 요소를 더했다. 인간들이 버린 쓰레기 더미가 오염된 바다를 보여주고 물고기들이 헤엄쳐 다니는 것을 볼 수 있다.
+
+씬 확인 사항
+-미닫이 문을 통한 이동(애니메이션)
+-고래(P(기존움직임),S(멈춤),Q(속도빠르게),B(역방향))
+- 씬 전환 (배 클릭(지하 > 지상), 보물상자 BOTTOM 클릭(지하 > 천국)) (그러나 제가 수행한 씬이 underworld 밖에 없기 때문에 실제로 이동할 수 없습니다.)
+
+수행한 부분
+<UnderWorld>
+1. Terrian : 생성 , Paint Terrain Raise or Lower Terrain / Smooth Height 
+2. Entrance_3D (1), Wall : 에셋 다운로드 및 배치, 수정
+3. Water4Advanced : 바다 표현 생성
+4. SharkV1 : Transform 컴포넌트와 관련된 애니메이션
+Whale, Whale(1) : (P(기존움직임),S(멈춤),Q(속도빠르게),B(역방향))
+TreasureChest_3 : Animation State Machine(Animator 창), fps 충돌 판정 활용 애니메이션
+5. 셰이더
+opened can small1 : ( Shader(Metalic, Smooth)) 셰이더 반영, 생성
+opened can tall1, hall_anchor : (Shader(NormalMap)) 셰이더 반영, 생성
+Rock_02_High : 두 텍스처가 50% 셰이더 반영, 생성
+Rock_01_Low : 배경에 다른 Texture 혼합
+6. 미니맵 생성, fps 컨트롤러, fakespot, treasure 위치 미니맵에 생성
+7. BGM 생성  :  Drop off
+8. Fakespot : 3D 오브젝트를 스크립트 다이아몬드 생성
+9. 배경 : skybox 하늘 적용(SkySeries Freebie)
+10. smoke : Particle 연기 효과 활용
